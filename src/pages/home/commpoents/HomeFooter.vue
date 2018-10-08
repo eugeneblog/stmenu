@@ -5,21 +5,13 @@
             <el-col :span="18">
                 <div class="grid-content bg-purple-light">
                     <div class="header_title">
-                        用区块链重新定义资产形态
+                        <img src="https://harbor.com/images/index/contact/harbor_logo_mark.svg" alt="">
                     </div>
                     <div class="header_detail">
-                        Stmenu是对房地产、股权，投资基金、美术作品
-等传统资产进行TOKEN化的合规平台。
+                       从Harbour 获取最新更新
                     </div>
                     <div class="header_button">
-                        <router-link to="about">联系我们</router-link>
-                    </div>
-                    <div class="header_link_row">
-                        <router-link to="#">Broker-Dealers</router-link>
-                        <div class="header_link_divide"></div>
-                        <router-link to="#">Issuers</router-link>
-                        <div class="header_link_divide"></div>
-                        <router-link to="#">Parthers</router-link>
+                        <router-link to="about">注册已获取更新</router-link>
                     </div>
                 </div>
             </el-col>
@@ -30,15 +22,13 @@
 
 <script>
 export default {
-  name: 'HomeMain'
+  name: 'HomeFooter'
 }
 </script>
 
 <style lang="scss" scoped>
 .el-row {
-    height: 470px;
-    margin-top: 20px;
-    background-repeat: no-repeat;
+    background: -webkit-gradient(linear,left top,left bottom,from(#3b4255),to(#101a37));
     margin-bottom: 20px;
     &:last-child {
       margin-bottom: 0;
@@ -71,26 +61,27 @@ export default {
     width: 100%;
     font-size: 48px;
     text-align: center;
-    color: #1b1d2e;
+    color: #ffffff;
     line-height: 64px;
     font-weight: 300;
   }
   .header_detail {
-    font-size: 22px;
-    width: 770px;
+    font-size: 32px;
     margin: 0 auto;
-    color: #727988;
+    color: #ffffff;
     margin-top: 24px;
-    line-height: 38px;
+    line-height: 44px;
     font-weight: 300;
     text-align: center;
   }
   .header_button {
       margin-top: 40px;
+      font-weight: 400;
+      margin-bottom: 60px;
       text-align: center;
   }
   .header_button > a{
-      background: #121a35;
+      background: #25419a;
       color: #fff;
       margin: 0 auto;
       display: block;
@@ -102,7 +93,7 @@ export default {
       border-radius: 5px;
   }
   .header_button > a:hover {
-      background: #0b1021;
+      background: #2447b0;
   }
   .header_link_row {
       margin: 0 auto;

@@ -8,11 +8,9 @@
           </div>
           <div class="navbar-right">
             <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal">
-              <el-menu-item index="1">处理中心</el-menu-item>
-              <el-menu-item index="2">新闻中心</el-menu-item>
-              <el-menu-item index="3">职业</el-menu-item>
-              <el-menu-item index="4">白皮书</el-menu-item>
-              <el-menu-item index="5">获取更新</el-menu-item>
+              <el-menu-item index="1">产品/服务</el-menu-item>
+              <el-menu-item index="2">白⽪书</el-menu-item>
+              <el-menu-item index="3">关于我们</el-menu-item>
             </el-menu>
           </div>
         </el-col>

@@ -5,10 +5,10 @@
             <el-col :span="18">
                 <div class="grid-content bg-purple-light">
                     <div class="header_title">
-                        The R-Token Standard, a building block for crypto-securities compliance
+                        S-Token标准加密资产合规的基石
                     </div>
                     <div class="header_detail">
-                        The Regulated Token (R-Token) is an open source standard and a core component of the Harbor compliance protocol. R-Token applies regulatory compliance at every step and across jurisdictions — from issuance to secondary trades.
+                        S-Token是一个开源标准，是Stmenu Compliance协议的核⼼部分。S-Token在每个步骤和跨辖区(从发行到交易)都符合法规。
                     </div>
                     <div class="header_more_feature">
                         <el-row>
@@ -17,13 +17,13 @@
                                     <div class="header_more_feature_item__content">
                                         <i class="el-icon-check"></i>
                                         <div class="header_more_feature_item__text">
-                                            ERC-20 compatible and works with the existing Ethereum ecosystem
+                                            ERC-1400兼容并与现有的以太坊⽣态系统协同⼯作
                                         </div>
                                     </div>
                                     <div class="header_more_feature_item__content">
                                         <i class="el-icon-check"></i>
                                         <div class="header_more_feature_item__text">
-                                            ERC-20 compatible and works with the existing Ethereum ecosystem
+                                            转帐只能在满⾜交易条件的白名单之间进行
                                         </div>
                                     </div>
                                 </div>
@@ -33,13 +33,13 @@
                                     <div class="header_more_feature_item__content">
                                         <i class="el-icon-check"></i>
                                         <div class="header_more_feature_item__text">
-                                            ERC-20 compatible and works with the existing Ethereum ecosystem
+                                            灵活的框架，以执行证券法规、KYC / AML政策、税收规则等。
                                         </div>
                                     </div>
                                     <div class="header_more_feature_item__content">
                                         <i class="el-icon-check"></i>
                                         <div class="header_more_feature_item__text">
-                                            ERC-20 compatible and works with the existing Ethereum ecosystem
+                                            在token级别跨交易平台遵从各国家/区域合规性
                                         </div>
                                     </div>
                                 </div>
@@ -48,15 +48,15 @@
                     </div>
                     <div class="header_feature_content">
                         <div class="index__platformStepDetail">
-                            R-Token compliance at a glance
+                            S-Token合规性⼀目了然
                         </div>
                         <div class="header_feature_item">
                             <div class="step__center">
                                 <div class="step__stepNumber">1</div>
-                                <div class="step__title">Faster, Easier, Low-Cost Capital Formation</div>
+                                <div class="step__title">S-Tokens将合规性转化为代码</div>
                                 <div class="step__detail">
                                     <p>
-                                        The R-Token embeds rules to ensure only eligible investors can trade the token. Issuers can also limit the number of investors and require holding periods.
+                                        S-Token嵌入规则以确保只有符合条件的投资者可以交易token，发行人也可以限制投资者的数量并设定持有期限。
                                     </p>
                                 </div>
                             </div>
@@ -64,10 +64,10 @@
                         <div class="header_feature_item">
                             <div class="step__center">
                                 <div class="step__stepNumber">2</div>
-                                <div class="step__title">Faster, Easier, Low-Cost Capital Formation</div>
+                                <div class="step__title">潜在投资者必须得到验证。</div>
                                 <div class="step__detail">
                                     <p>
-                                        The R-Token embeds rules to ensure only eligible investors can trade the token. Issuers can also limit the number of investors and require holding periods.
+                                        投资者通过验证流程(KYC / AML / Accreditation)来确定token持有者资格。认可的投资者被添加到以太坊区块链的白名单中。
                                     </p>
                                 </div>
                             </div>
@@ -75,19 +75,19 @@
                         <div class="header_feature_item">
                             <div class="step__center">
                                 <div class="step__stepNumber">3</div>
-                                <div class="step__title">Faster, Easier, Low-Cost Capital Formation</div>
+                                <div class="step__title">S-Token⾃我管理所有交易。</div>
                                 <div class="step__detail">
                                     <p>
-                                        The R-Token embeds rules to ensure only eligible investors can trade the token. Issuers can also limit the number of investors and require holding periods.
+                                        启动交易时，S-Token会检查白名单以确认符合法规要求。如果是，则交易被批准。
                                     </p>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="header_link_row">
-                        <router-link to="#">Broker-Dealers</router-link>
+                        <router-link to="#">阅读白皮书</router-link>
                         <div class="header_link_divide"></div>
-                        <router-link to="#">Issuers</router-link>
+                        <router-link to="#">访问github</router-link>
                         <div class="header_link_divide"></div>
                         <router-link to="#">Parthers</router-link>
                     </div>

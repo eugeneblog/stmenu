@@ -6,6 +6,8 @@
         <header-feature></header-feature>
         <header-feature-more></header-feature-more>
         <home-example></home-example>
+        <home-footer></home-footer>
+        <home-footer-information></home-footer-information>
     </div>
 </template>
 
@@ -16,6 +18,8 @@ import HeaderMainDescription from './commpoents/HeaderMainDescription'
 import HeaderFeature from './commpoents/HeaderFeature'
 import HeaderFeatureMore from './commpoents/HeaderFeatureMore'
 import HomeExample from './commpoents/HomeExample'
+import HomeFooter from './commpoents/HomeFooter'
+import HomeFooterInformation from './commpoents/HomeFooterInformation'
 export default {
   name: 'Home',
   components: {
@@ -24,7 +28,9 @@ export default {
     HeaderMainDescription,
     HeaderFeature,
     HeaderFeatureMore,
-    HomeExample
+    HomeExample,
+    HomeFooter,
+    HomeFooterInformation
   }
 }
 </script>

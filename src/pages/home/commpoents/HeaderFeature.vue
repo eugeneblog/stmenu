@@ -8,37 +8,34 @@
             <el-col :span="18">
                 <div class="grid-content bg-purple-light">
                     <div class="header_title">
-                        Welcome to the digital age of private securities
+                        欢迎进⼊资产数字化时代
                     </div>
                     <div class="header_detail">
-Tokenization changes the economics of capital formation and the dynamics of secondary trading. It creates exciting new opportunities for issuers and broker-dealers to unbundle and bundle assets in new ways and reach investors globally.
+                        TOKEN化改变了传统资产的形态，提⾼二级交易的动态，为发行人和经纪商创造令新的市场机会，以新的⽅方式颗粒化资产，并吸引全球投资者。
                     </div>
                     <div class="header_feature_content">
                         <div class="header_feature_item">
-                            <div>Faster, Easier, Low-Cost Capital Formation</div>
+                            <div>更快、更容易、低成本的资产形成</div>
                             <ul>
-                                <li>Tokenize individual assets</li>
-                                <li>Bundle those assets into funds</li>
-                                <li>Enforce regulations through technology</li>
-                                <li>Maintain accurate records</li>
+                                <li>对单个资产进行TOKEN化</li>
+                                <li>通过技术实施合规管理</li>
+                                <li>保持准确的记录</li>
                             </ul>
                         </div>
                         <div class="header_feature_item">
-                            <div>Faster, Easier, Low-Cost Capital Formation</div>
+                            <div>促进资金流动</div>
                             <ul>
-                                <li>Tokenize individual assets</li>
-                                <li>Bundle those assets into funds</li>
-                                <li>Enforce regulations through technology</li>
-                                <li>Maintain accurate records</li>
+                                <li>促进快速结算</li>
+                                <li>改善流动性和价值</li>
+                                <li>实施⼆级交易合规</li>
                             </ul>
                         </div>
                         <div class="header_feature_item">
-                            <div>Faster, Easier, Low-Cost Capital Formation</div>
+                            <div>吸引新投资者</div>
                             <ul>
-                                <li>Tokenize individual assets</li>
-                                <li>Bundle those assets into funds</li>
-                                <li>Enforce regulations through technology</li>
-                                <li>Maintain accurate records</li>
+                                <li>通过分拆来降低投资最低额度</li>
+                                <li>通过重新捆绑创建新的基金类型</li>
+                                <li>覆盖全球投资者</li>
                             </ul>
                         </div>
                     </div>
