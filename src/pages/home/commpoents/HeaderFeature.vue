@@ -1,41 +1,24 @@
 <template>
     <div>
         <el-row>
-            <!-- <div class="rowContainer_backgroundContent">
-                <img class="index__leftSlashes" src="https://harbor.com/images/index/mobile/blue_on_white_stripes.svg" alt="">
-            </div> -->
             <el-col :span="3"><div class="grid-content bg-purple"></div></el-col>
             <el-col :span="18">
                 <div class="grid-content bg-purple-light">
                     <div class="header_title">
-                        欢迎进⼊资产数字化时代
+                        {{ context.title }}
                     </div>
                     <div class="header_detail">
-                        TOKEN化改变了传统资产的形态，提⾼二级交易的动态，为发行人和经纪商创造令新的市场机会，以新的⽅方式颗粒化资产，并吸引全球投资者。
+                        {{ context.detail }}
                     </div>
                     <div class="header_feature_content">
-                        <div class="header_feature_item">
-                            <div>更快、更容易、低成本的资产形成</div>
-                            <ul>
-                                <li>对单个资产进行TOKEN化</li>
-                                <li>通过技术实施合规管理</li>
-                                <li>保持准确的记录</li>
-                            </ul>
-                        </div>
-                        <div class="header_feature_item">
-                            <div>促进资金流动</div>
-                            <ul>
-                                <li>促进快速结算</li>
-                                <li>改善流动性和价值</li>
-                                <li>实施⼆级交易合规</li>
-                            </ul>
-                        </div>
-                        <div class="header_feature_item">
-                            <div>吸引新投资者</div>
-                            <ul>
-                                <li>通过分拆来降低投资最低额度</li>
-                                <li>通过重新捆绑创建新的基金类型</li>
-                                <li>覆盖全球投资者</li>
+                        <div
+                        class="header_feature_item"
+                        v-for="item in context.feture"
+                        :key='item.id'
+                        >
+                            <div class="header_feature_item_title">{{ item.title }}</div>
+                            <ul v-for="text of item.texts" :key='text.id'>
+                                <li>{{ text.text }}</li>
                             </ul>
                         </div>
                     </div>
@@ -48,14 +31,69 @@
 
 <script>
 export default {
-  name: 'HeaderFeature'
+  name: 'HeaderFeature',
+  data () {
+    return {
+      context: {
+        title: '欢迎进⼊资产数字化时代',
+        detail: 'TOKEN化改变了传统资产的形态，提⾼二级交易的动态，为发行人和经纪商创造令新的市场机会，以新的⽅方式颗粒化资产，并吸引全球投资者。',
+        feture: [
+          {
+            id: 1,
+            title: '更快、更容易、低成本的资产形成',
+            texts: [
+              {
+                id: 1,
+                text: '对单个资产进行TOKEN化'
+              }, {
+                id: 2,
+                text: '通过技术实施合规管理'
+              }, {
+                id: 3,
+                text: '保持准确的记录'
+              }
+            ]
+          }, {
+            id: 2,
+            title: '促进资金流动',
+            texts: [
+              {
+                id: 1,
+                text: '促进快速结算'
+              }, {
+                id: 2,
+                text: '改善流动性和价值'
+              }, {
+                id: 3,
+                text: '实施⼆级交易合规'
+              }
+            ]
+          }, {
+            id: 3,
+            title: '吸引新投资者',
+            texts: [
+              {
+                id: 1,
+                text: '通过分拆来降低投资最低额度'
+              }, {
+                id: 2,
+                text: '通过重新捆绑创建新的基金类型'
+              }, {
+                id: 3,
+                text: '覆盖全球投资者'
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
 }
 </script>
 
 <style lang="scss" scoped>
 .el-row {
     background: #eaf6fb;
-    background-repeat: no-repeat;
     margin-bottom: 20px;
     &:last-child {
       margin-bottom: 0;
@@ -68,15 +106,10 @@ export default {
     border-radius: 4px;
     min-height: 36px;
   }
-  .row-bg {
-    padding: 10px 0;
-    background-color: #f9fafc;
-  }
   .index__leftSlashes{
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 275px;
   }
   .header_title {
     margin-top: 80px;
@@ -89,7 +122,6 @@ export default {
   }
   .header_detail {
     font-size: 16px;
-    width: 770px;
     max-width: 980px;
     margin: 0 auto;
     color: #727988;
@@ -99,10 +131,13 @@ export default {
     line-height: 1.75;
   }
   .header_feature_content {
-      margin: 0 auto;
-      height: 256px;
-      margin: 32px 0 60px 0;
-      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+      flex-direction: row;
+      margin: 32px 0 60px 22px;
   }
   .header_feature_content .header_feature_item{
       margin-top: 40px;
@@ -137,4 +172,12 @@ export default {
     font-family: FontAwesome;
     line-height: 28px;
   }
+   @media screen and (max-width: 760px) {
+       .header_feature_content{
+           flex-direction: column;
+       }
+       .header_feature_content .header_feature_item {
+           width: 90%;
+       }
+   }
 </style>

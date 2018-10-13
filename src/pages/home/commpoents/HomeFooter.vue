@@ -5,13 +5,13 @@
             <el-col :span="18">
                 <div class="grid-content bg-purple-light">
                     <div class="header_title">
-                        <img src="https://harbor.com/images/index/contact/harbor_logo_mark.svg" alt="">
+                        <img :src="context.logoUrl" alt="">
                     </div>
                     <div class="header_detail">
-                       从Harbour 获取最新更新
+                       {{ context.title }}
                     </div>
                     <div class="header_button">
-                        <router-link to="about">注册已获取更新</router-link>
+                        <router-link to="about">{{ context.button }}</router-link>
                     </div>
                 </div>
             </el-col>
@@ -22,7 +22,16 @@
 
 <script>
 export default {
-  name: 'HomeFooter'
+  name: 'HomeFooter',
+  data () {
+    return {
+      context: {
+        logoUrl: require('../../../assets/img/footerLogo@3x.png'),
+        title: '从Stmenu 获取最新更新',
+        button: '注册已获取更新'
+      }
+    }
+  }
 }
 </script>
 
@@ -112,5 +121,29 @@ export default {
       box-sizing: border-box;
       background: #bbb;
       margin: 0px 25px;
+  }
+  .header_title > img {
+        width: 56px;
+        height: 56px;
+  }
+  @media screen and (max-width: 760px) {
+    .header_title {
+        margin: 34px 10px 0px 10px;
+    }
+    .header_title > img {
+        width: 48px;
+        height: 48px;
+    }
+    .header_detail {
+        font-size: 24px;
+        margin-top: 24px;
+        line-height: 24px;
+    }
+    .header_button > a{
+      width: 300px;
+      height: 48px;
+      line-height: 48px;
+      font-size: 18px;
+    }
   }
 </style>

@@ -4,10 +4,7 @@
             <el-col :span="24">
                 <div class="grid-content bg-purple">
                     <div class="home_footer">
-                        <a href="">© 2018 Harbor Platform, Inc</a>
-                        <a href="">Newsroom</a>
-                        <a href="">Partnership Inquiries</a>
-                        <a href="">Privacy Policy</a>
+                        <a href="">© Stmenu Platform Reserved</a>
                     </div>
                 </div>
             </el-col>

@@ -4,14 +4,41 @@
         <el-col :span="3"><div class="grid-content bg-purple"></div></el-col>
         <el-col :span="18">
           <div class="grid-content bg-purple-light">
-            <img src="https://harbor.com/images/harbor-logo.svg" alt="logo">
+            <img :src = 'headerList.logoUrl' alt="logo">
           </div>
-          <div class="navbar-right">
-            <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal">
-              <el-menu-item index="1">产品/服务</el-menu-item>
-              <el-menu-item index="2">白⽪书</el-menu-item>
-              <el-menu-item index="3">关于我们</el-menu-item>
+          <div
+          class="navbar-right"
+          :class="{ isHidden : isMobile }"
+          v-show="!isMobile"
+          >
+            <el-menu
+            :default-active="activeIndex"
+            class="el-menu-demo"
+            mode="horizontal">
+              <el-menu-item
+              :index="String(item.index)"
+              v-for="item of headerList.title"
+              :key='item.index'
+              >{{ item.text }}</el-menu-item>
             </el-menu>
+          </div>
+          <div v-show="isMobile" class="mobile-navbar">
+            <span class="mobile-navbar-menu" @click="isShowHandleClick">菜单</span>
+            <div class="mobild-navbar-list" v-show="isShowMobScreen">
+              <div class="mobild-navbar-close">
+                <i class="el-icon-close" @click="isShowHandleClick"></i>
+              </div>
+              <ul>
+                <li
+                v-for="item of headerList.title"
+                :key = 'item.index'
+                >
+                  <a href="">
+                    {{ item.text }}
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </el-col>
         <el-col :span="3"><div class="grid-content bg-purple"></div></el-col>
@@ -21,10 +48,53 @@
 <script>
 export default {
   name: 'HomeHeader',
+  props: {
+    data: Object
+  },
   data () {
     return {
       activeIndex: '1',
-      activeIndex2: '1'
+      activeIndex2: '1',
+      isMobile: false,
+      isShowMobScreen: false,
+      headerList: {
+        logoUrl: require('../../../assets/img/stmenu@3x.png'),
+        title: [{
+          index: 1,
+          text: '产品/服务'
+        }, {
+          index: 2,
+          text: '白⽪书'
+        }, {
+          index: 3,
+          text: '关于我们'
+        }]
+      }
+    }
+  },
+  created () {
+    this.changeMediaScreen(this)
+  },
+  mounted () {
+    const _this = this
+    window.onresize = () => {
+      _this.changeMediaScreen(_this)
+    }
+  },
+  methods: {
+    getScreenWidth () {
+      return window.outerWidth
+    },
+    changeMediaScreen (el) {
+      let winWidth = this.getScreenWidth()
+      if (winWidth >= 760) {
+        el.isMobile = false
+      } else {
+        el.isMobile = true
+      }
+    },
+    isShowHandleClick () {
+      this.isShowMobScreen = !this.isShowMobScreen
     }
   }
 }
@@ -32,46 +102,91 @@ export default {
 
 <style lang="scss" scoped>
     .el-row {
-
-    margin-top: 20px;
+      margin-top: 20px;
     &:last-child {
       margin-bottom: 0;
     }
   }
-  .el-col {
-    border-radius: 4px;
-  }
-  .grid-content {
-    border-radius: 4px;
-    min-height: 36px;
-  }
-  .row-bg {
-    padding: 10px 0;
-    background-color: #f9fafc;
-  }
-  .bg-purple-light {
-    position: absolute;
-    top: 50%;
-    height: 60px;
-    margin-top: -30px;
-    float: left;
-  }
-  .bg-purple-light img{
+ .grid-content {
+  min-height: 36px;
+}
+.bg-purple-light {
+  position: absolute;
+  top: 50%;
+  margin-top: -30px;
+  float: left;
+  img {
     height: 34px;
     margin-top: 20px;
     vertical-align: middle;
   }
-  .el-menu-demo {
-    border-bottom: none;
-    float: right;
+}
+.el-menu-demo {
+  border-bottom: none;
+  float: right;
+}
+.el-menu--horizontal,.el-menu--horizontal>.el-menu-item {
+  border-bottom: none;
+}
+.el-menu--horizontal {
+  & > .el-menu-item {
+    &.is-active {
+      border-bottom: 0px;
+    }
   }
-  .el-menu--horizontal,.el-menu--horizontal>.el-menu-item {
-    border-bottom: none;
+}
+.isHidden {
+  display: none;
+}
+.mobile-navbar {
+  float: right;
+  color: #464b5a;
+  font-weight: 300;
+}
+.mobild-navbar-list {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #3c4253;
+  z-index: 999;
+  a {
+    display: block;
+    margin-top: 48px;
+    text-decoration: none;
+    color: #dadce4;
+    &:hover {
+      text-decoration: underline;
+      font-weight: 400;
+    }
   }
-  .el-menu--horizontal>.el-menu-item.is-active{
-    border-bottom: 0px;
+  ul {
+    margin: 0;
+    padding: 8px 40px 68px 40px;
   }
-  .navbar-right{
-    height: 60px;
+}
+.mobild-navbar-close {
+  margin-right: 10px;
+  width: 50px;
+  float: right;
+  font-size: 34px;
+  font-weight: 300;
+  color: #dadcda;
+  text-align: right;
+  i {
+    padding: 15px;
+    &:hover {
+      cursor: pointer;
+      font-weight: 400;
+    }
   }
+}
+.mobile-navbar-menu {
+  cursor: pointer;
+}
+@media screen and (max-width: 760px) {
+  .bg-purple-light img{
+    height: 20px;
+  }
+}
 </style>
