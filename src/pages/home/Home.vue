@@ -1,9 +1,9 @@
 <template>
     <div>
-        <home-header></home-header>
-        <home-main></home-main>
-        <header-main-description></header-main-description>
-        <header-feature></header-feature>
+        <home-header :headerList="headerList"></home-header>
+        <home-main :mainContext="mainContext"></home-main>
+        <header-main-description :mainDescription="mainDescription"></header-main-description>
+        <header-feature :HomeFeatureContext="HomeFeatureContext"></header-feature>
         <header-feature-more></header-feature-more>
         <header-feature-des></header-feature-des>
         <home-example></home-example>
@@ -22,6 +22,8 @@ import HeaderFeatureDes from './commpoents/HeaderFeatureDes'
 import HomeExample from './commpoents/HomeExample'
 import HomeFooter from './commpoents/HomeFooter'
 import HomeFooterInformation from './commpoents/HomeFooterInformation'
+import axios from 'axios'
+
 export default {
   name: 'Home',
   components: {
@@ -34,6 +36,32 @@ export default {
     HomeExample,
     HomeFooter,
     HomeFooterInformation
+  },
+  data () {
+    return {
+      headerList: {},
+      mainContext: {},
+      mainDescription: {},
+      HomeFeatureContext: {}
+    }
+  },
+  methods: {
+    getHomeInfo () {
+      axios.get('api/homeData.json').then(this.getHomeInfoSuc)
+    },
+    getHomeInfoSuc (res) {
+      res = res.data
+      if (res.ret && res.data) {
+        const data = res.data
+        this.headerList = data.headerList
+        this.mainContext = data.mainContext
+        this.mainDescription = data.mainDescription
+        this.HomeFeatureContext = data.HomeFeatureContext
+      }
+    }
+  },
+  mounted () {
+    this.getHomeInfo()
   }
 }
 </script>

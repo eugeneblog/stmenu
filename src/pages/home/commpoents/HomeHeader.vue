@@ -15,11 +15,18 @@
             :default-active="activeIndex"
             class="el-menu-demo"
             mode="horizontal">
-              <el-menu-item
-              :index="String(item.index)"
+              <router-link
               v-for="item of headerList.title"
               :key='item.index'
-              >{{ item.text }}</el-menu-item>
+              :to = "item.link"
+              class="header-link-a"
+              >
+                <el-menu-item
+                :index="String(item.index)"
+                >
+                  {{ item.text }}
+                </el-menu-item>
+              </router-link>
             </el-menu>
           </div>
           <div v-show="isMobile" class="mobile-navbar">
@@ -33,9 +40,7 @@
                 v-for="item of headerList.title"
                 :key = 'item.index'
                 >
-                  <a href="">
-                    {{ item.text }}
-                  </a>
+                  <router-link :to="item.link">{{ item.text }}</router-link>
                 </li>
               </ul>
             </div>
@@ -49,27 +54,14 @@
 export default {
   name: 'HomeHeader',
   props: {
-    data: Object
+    headerList: Object
   },
   data () {
     return {
       activeIndex: '1',
       activeIndex2: '1',
       isMobile: false,
-      isShowMobScreen: false,
-      headerList: {
-        logoUrl: require('../../../assets/img/stmenu@3x.png'),
-        title: [{
-          index: 1,
-          text: '产品/服务'
-        }, {
-          index: 2,
-          text: '白⽪书'
-        }, {
-          index: 3,
-          text: '关于我们'
-        }]
-      }
+      isShowMobScreen: false
     }
   },
   created () {
@@ -101,7 +93,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .el-row {
+  .header-link-a{
+    float: left;
+    text-decoration: none;
+  }
+  .el-row {
       margin-top: 20px;
     &:last-child {
       margin-bottom: 0;

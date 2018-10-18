@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="81px" height="18px" viewBox="0 0 81 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>blockchain-three-dots</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Marketing-Site---Home" transform="translate(-160.000000, -704.000000)">
+            <g id="Group-13" transform="translate(0.000000, 610.000000)">
+                <g id="blockchain-three-dots" transform="translate(160.000000, 94.000000)">
+                    <rect id="Rectangle-6" fill="#2040A0" x="0" y="3" width="12" height="12" rx="1"></rect>
+                    <rect id="Rectangle-6" fill="#101A37" x="33" y="3" width="12" height="12" rx="1"></rect>
+                    <rect id="Rectangle-6" fill="#91DED4" transform="translate(72.000000, 9.000000) rotate(45.000000) translate(-72.000000, -9.000000) " x="66" y="3" width="12" height="12" rx="1"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

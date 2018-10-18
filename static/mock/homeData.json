@@ -1,0 +1,93 @@
+{
+    "ret": true,
+    "data": {
+        "headerList": {
+            "logoUrl": "/static/img/stmenu@3x.png",
+            "title": [{
+              "index": 1,
+              "text": "产品/服务",
+              "link": "/"
+            }, {
+              "index": 2,
+              "text": "白⽪书",
+              "link": "whitePaper"
+            }, {
+              "index": 3,
+              "text": "关于我们",
+              "link": "about"
+            }]
+        },
+        "mainContext": {
+            "title": "用区块链重新定义资产形态",
+            "detail": "Stmenu是对房地产、股权，投资基金、美术作品等传统资产进行TOKEN化的合规平台。",
+            "button": "联系我们"
+        },
+        "mainDescription": {
+            "imgUrl": "/static/img/blockchain-three-dots.svg",
+            "title": "改变财产观念，资产数字化是未来趋势。",
+            "detail": [
+              {
+                "id": 1,
+                "class": "index__opportunityResponse1",
+                "text": "资产TOKEN化是将资产权益转换为区块链上token的过程，从而使资本形成更快，更容易和更方便转变为颗粒化财产形态，同时为投资者释放二级流动性和价值"
+              }, {
+                "id": 2,
+                "class": "index__opportunityResponse2",
+                "text": "Stmenu平台和合规协议确保令牌化证券符合发行时的现有证券法以及全球各地的每笔交易。"
+              }
+            ]
+        },
+        "HomeFeatureContext": {
+            "title": "欢迎进⼊资产数字化时代",
+            "detail": "TOKEN化改变了传统资产的形态，提⾼二级交易的动态，为发行人和经纪商创造令新的市场机会，以新的⽅方式颗粒化资产，并吸引全球投资者。",
+            "feture": [
+              {
+                "id": 1,
+                "title": "更快、更容易、低成本的资产形成",
+                "texts": [
+                  {
+                    "id": 1,
+                    "text": "对单个资产进行TOKEN化"
+                  }, {
+                    "id": 2,
+                    "text": "通过技术实施合规管理"
+                  }, {
+                    "id": 3,
+                    "text": "保持准确的记录"
+                  }
+                ]
+              }, {
+                "id": 2,
+                "title": "促进资金流动",
+                "texts": [
+                  {
+                    "id": 1,
+                    "text": "促进快速结算"
+                  }, {
+                    "id": 2,
+                    "text": "改善流动性和价值"
+                  }, {
+                    "id": 3,
+                    "text": "实施⼆级交易合规"
+                  }
+                ]
+              }, {
+                "id": 3,
+                "title": "吸引新投资者",
+                "texts": [
+                  {
+                    "id": 1,
+                    "text": "通过分拆来降低投资最低额度"
+                  }, {
+                    "id": 2,
+                    "text": "通过重新捆绑创建新的基金类型"
+                  }, {
+                    "id": 3,
+                    "text": "覆盖全球投资者"
+                  }
+                ]
+              }
+            ]
+        }
+    }
+}

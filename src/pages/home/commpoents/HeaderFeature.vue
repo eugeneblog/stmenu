@@ -5,15 +5,15 @@
             <el-col :span="18">
                 <div class="grid-content bg-purple-light">
                     <div class="header_title">
-                        {{ context.title }}
+                        {{ HomeFeatureContext.title }}
                     </div>
                     <div class="header_detail">
-                        {{ context.detail }}
+                        {{ HomeFeatureContext.detail }}
                     </div>
                     <div class="header_feature_content">
                         <div
                         class="header_feature_item"
-                        v-for="item in context.feture"
+                        v-for="item in HomeFeatureContext.feture"
                         :key='item.id'
                         >
                             <div class="header_feature_item_title">{{ item.title }}</div>
@@ -32,61 +32,8 @@
 <script>
 export default {
   name: 'HeaderFeature',
-  data () {
-    return {
-      context: {
-        title: '欢迎进⼊资产数字化时代',
-        detail: 'TOKEN化改变了传统资产的形态，提⾼二级交易的动态，为发行人和经纪商创造令新的市场机会，以新的⽅方式颗粒化资产，并吸引全球投资者。',
-        feture: [
-          {
-            id: 1,
-            title: '更快、更容易、低成本的资产形成',
-            texts: [
-              {
-                id: 1,
-                text: '对单个资产进行TOKEN化'
-              }, {
-                id: 2,
-                text: '通过技术实施合规管理'
-              }, {
-                id: 3,
-                text: '保持准确的记录'
-              }
-            ]
-          }, {
-            id: 2,
-            title: '促进资金流动',
-            texts: [
-              {
-                id: 1,
-                text: '促进快速结算'
-              }, {
-                id: 2,
-                text: '改善流动性和价值'
-              }, {
-                id: 3,
-                text: '实施⼆级交易合规'
-              }
-            ]
-          }, {
-            id: 3,
-            title: '吸引新投资者',
-            texts: [
-              {
-                id: 1,
-                text: '通过分拆来降低投资最低额度'
-              }, {
-                id: 2,
-                text: '通过重新捆绑创建新的基金类型'
-              }, {
-                id: 3,
-                text: '覆盖全球投资者'
-              }
-            ]
-          }
-        ]
-      }
-    }
+  props: {
+    HomeFeatureContext: Object
   }
 }
 </script>

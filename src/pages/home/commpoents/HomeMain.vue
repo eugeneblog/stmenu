@@ -5,16 +5,16 @@
             <el-col :span="18">
                 <div class="grid-content bg-purple-light">
                     <div class="header_title">
-                        {{ context.title }}
+                        {{ mainContext.title }}
                     </div>
                     <div class="header_detail">
-                        {{ context.detail }}
+                        {{ mainContext.detail }}
                     </div>
                     <div class="header_button">
-                        <router-link to="about">{{ context.button }}</router-link>
+                        <router-link to="about">{{ mainContext.button }}</router-link>
                     </div>
                     <div class="header_link_row">
-                        <template v-for="item in context.link" >
+                        <template v-for="item in mainContext.link" >
                             <div v-if="item.id > 1"
                                 class="header_link_divide"
                                 :key='item.id+1'
@@ -37,19 +37,8 @@
 <script>
 export default {
   name: 'HomeMain',
-  data () {
-    return {
-      mainContent: {
-        items: [{
-          id: '1'
-        }]
-      },
-      context: {
-        title: '用区块链重新定义资产形态',
-        detail: 'Stmenu是对房地产、股权，投资基金、美术作品等传统资产进行TOKEN化的合规平台。',
-        button: '联系我们'
-      }
-    }
+  props: {
+    mainContext: Object
   }
 }
 </script>

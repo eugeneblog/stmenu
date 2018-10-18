@@ -6,9 +6,9 @@
                 <div class="grid-content bg-purple-light">
                     <div class="grid-content-box">
                         <div class="index__opportunityDots">
-                            <img :src='context.imgUrl.blockchain'>
+                            <img :src="mainDescription.imgUrl">
                         </div>
-                        <pre class="index__opportunityTitle" >{{ context.title }}</pre>
+                        <pre class="index__opportunityTitle" >{{ mainDescription.title }}</pre>
                     </div>
                 </div>
             </el-col>
@@ -16,7 +16,7 @@
                 <div class="grid-content">
                     <div class="grid-context">
                         <p
-                        v-for="item in context.detail"
+                        v-for="item in mainDescription.detail"
                         :key="item.id"
                         :class="item.class">{{ item.text }}</p>
                     </div>
@@ -30,26 +30,8 @@
 <script>
 export default {
   name: 'HeaderMainDescription',
-  data () {
-    return {
-      context: {
-        imgUrl: {
-          blockchain: 'https://harbor.com/images/index/opportunity/blockchain-three-dots.svg'
-        },
-        title: `改变财产观念，资产数字化是未来趋势。`,
-        detail: [
-          {
-            id: 1,
-            class: 'index__opportunityResponse1',
-            text: '资产TOKEN化是将资产权益转换为区块链上token的过程，从而使资本形成更快，更容易和更方便转变为颗粒化财产形态，同时为投资者释放二级流动性和价值'
-          }, {
-            id: 2,
-            class: 'index__opportunityResponse2',
-            text: 'Stmenu平台和合规协议确保令牌化证券符合发行时的现有证券法以及全球各地的每笔交易。'
-          }
-        ]
-      }
-    }
+  props: {
+    mainDescription: Object
   }
 }
 </script>
