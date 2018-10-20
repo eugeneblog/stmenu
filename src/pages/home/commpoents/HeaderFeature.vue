@@ -5,15 +5,15 @@
             <el-col :span="18">
                 <div class="grid-content bg-purple-light">
                     <div class="header_title">
-                        {{ HomeFeatureContext.title }}
+                        {{ homeFeatureContext.title }}
                     </div>
                     <div class="header_detail">
-                        {{ HomeFeatureContext.detail }}
+                        {{ homeFeatureContext.detail }}
                     </div>
                     <div class="header_feature_content">
                         <div
                         class="header_feature_item"
-                        v-for="item in HomeFeatureContext.feture"
+                        v-for="item in homeFeatureContext.feture"
                         :key='item.id'
                         >
                             <div class="header_feature_item_title">{{ item.title }}</div>
@@ -33,7 +33,7 @@
 export default {
   name: 'HeaderFeature',
   props: {
-    HomeFeatureContext: Object
+    homeFeatureContext: Object
   }
 }
 </script>

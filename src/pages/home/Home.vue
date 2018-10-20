@@ -3,7 +3,7 @@
         <home-header :headerList="headerList"></home-header>
         <home-main :mainContext="mainContext"></home-main>
         <header-main-description :mainDescription="mainDescription"></header-main-description>
-        <header-feature :HomeFeatureContext="HomeFeatureContext"></header-feature>
+        <header-feature :homeFeatureContext="HomeFeatureContext"></header-feature>
         <header-feature-more></header-feature-more>
         <header-feature-des></header-feature-des>
         <home-example></home-example>
@@ -47,7 +47,7 @@ export default {
   },
   methods: {
     getHomeInfo () {
-      axios.get('api/homeData.json').then(this.getHomeInfoSuc)
+      axios.get('static/mock/homeData.json').then(this.getHomeInfoSuc)
     },
     getHomeInfoSuc (res) {
       res = res.data
