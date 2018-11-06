@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="home-main">
         <el-row>
             <el-col :span="3"><div class="grid-content bg-purple"></div></el-col>
             <el-col :span="18">
@@ -44,6 +44,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.home-main {
+    background: url('/static/img/hero-illustration.svg');
+    background-position: 50% -380px;
+}
 .el-row {
     margin-top: 20px;
     background-repeat: no-repeat;
@@ -81,15 +85,17 @@ export default {
     color: #1b1d2e;
     line-height: 64px;
     font-weight: 300;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3)
   }
   .header_detail {
     font-size: 22px;
     margin: 0 auto;
-    color: #727988;
+    color: #3c3e40;
     margin-top: 24px;
     line-height: 38px;
     font-weight: 300;
     text-align: center;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.3);
     overflow: hidden;
   }
   .header_button {

@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="home-header">
       <el-row :gutter="20">
         <el-col :span="3"><div class="grid-content bg-purple"></div></el-col>
         <el-col :span="18">

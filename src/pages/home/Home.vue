@@ -1,7 +1,7 @@
 <template>
     <div>
         <home-header :headerList="headerList"></home-header>
-        <home-main :mainContext="mainContext"></home-main>
+        <home-main ref="homeMain" :mainContext="mainContext"></home-main>
         <header-main-description :mainDescription="mainDescription"></header-main-description>
         <header-feature :homeFeatureContext="HomeFeatureContext"></header-feature>
         <header-feature-more></header-feature-more>
@@ -61,7 +61,46 @@ export default {
     }
   },
   mounted () {
+    const _this = this
+    let mainBg = _this.$refs.homeMain.$el
     this.getHomeInfo()
+    let top = -380
+    let scrollFunc = function (e) {
+      e = e || window.event
+      if (e.wheelDelta) { // 第一步：先判断浏览器IE，谷歌滑轮事件
+        if (e.wheelDelta > 0) { // 当滑轮向上滚动时
+          mainBg.style.backgroundPosition = `50% ${top}px`
+          if (top > -448) {
+            top -= 0.8
+          }
+        }
+        if (e.wheelDelta < 0) { // 当滑轮向下滚动时\
+          mainBg.style.backgroundPosition = `50% ${top}px`
+          if (top < -350) {
+            top = top + 0.8
+          }
+        }
+      } else if (e.detail) { // Firefox滑轮事件
+        if (e.detail > 0) {
+          mainBg.style.backgroundPosition = `50% ${top}px`
+          if (top > -448) {
+            top -= 0.8
+          }
+        }
+        if (e.detail < 0) { // 当滑轮向下滚动时
+          mainBg.style.backgroundPosition = `50% ${top}px`
+          if (top < -350) {
+            top = top + 0.8
+          }
+        }
+      }
+    }
+    // 给页面绑定滑轮滚动事件
+    if (document.addEventListener) { // firefox
+      document.addEventListener('DOMMouseScroll', scrollFunc, false)
+    }
+    // 滚动滑轮触发scrollFunc方法  // ie 谷歌
+    window.onmousewheel = document.onmousewheel = scrollFunc
   }
 }
 </script>
