@@ -14,7 +14,10 @@
                         :key="item.id"
                         >
                             <div class="step__center">
-                                <div class="step__stepNumber">{{ item.id }}</div>
+                                <!-- <div class="step__stepNumber">{{ item.id }}</div> -->
+                                <div class="step_header_svg">
+                                    <img :src="item.svg" />
+                                </div>
                                 <div class="step__title">{{ item.title }}</div>
                                 <div class="step__detail">
                                     <p>{{ item.text }}</p>
@@ -45,15 +48,18 @@ export default {
           {
             id: 1,
             title: 'S-Tokens将合规性转化为代码',
-            text: 'S-Token嵌入规则以确保只有符合条件的投资者可以交易token，发行人也可以限制投资者的数量并设定持有期限。'
+            text: 'S-Token嵌入规则以确保只有符合条件的投资者可以交易token，发行人也可以限制投资者的数量并设定持有期限。',
+            svg: '/static/img/a2.svg'
           }, {
             id: 2,
             title: '潜在投资者必须得到验证。',
-            text: '投资者通过验证流程(KYC / AML / Accreditation)来确定token持有者资格。认可的投资者被添加到以太坊区块链的白名单中。'
+            text: '投资者通过验证流程(KYC / AML / Accreditation)来确定token持有者资格。认可的投资者被添加到以太坊区块链的白名单中。',
+            svg: '/static/img/a1.svg'
           }, {
             id: 3,
             title: 'S-Token⾃我管理所有交易。',
-            text: '启动交易时，S-Token会检查白名单以确认符合法规要求。如果是，则交易被批准。'
+            text: '启动交易时，S-Token会检查白名单以确认符合法规要求。如果是，则交易被批准。',
+            svg: '/static/img/a3.svg'
           }
         ]
       }
@@ -130,6 +136,7 @@ export default {
       line-height: 60px;
   }
   .step__title {
+      color: #0D47A1;
       margin-top: 14px;
   }
   .step__detail p{
@@ -141,6 +148,10 @@ export default {
   }
   .step__center {
       padding-right: 30px;
+  }
+  .step_header_svg {
+      width: 70px;
+      height: 70px;
   }
   @media screen and (max-width: 760px) {
     .header_link_row {

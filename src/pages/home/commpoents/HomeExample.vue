@@ -1,19 +1,19 @@
 <template>
     <div>
         <el-row>
-            <el-col  :xs="1" :sm="3" :md="3" :xl="9" :lg="3"><div class="grid-content bg-purple"></div></el-col>
-            <el-col  :xs="22" :sm="18" :md="18" :xl="9" :lg="18">
+            <el-col  :xs="2" :sm="3" :md="3" :xl="9" :lg="3"><div class="grid-content bg-purple"></div></el-col>
+            <el-col  :xs="20" :sm="18" :md="18" :xl="9" :lg="18">
                 <div class="grid-content bg-purple-light">
                     <div class="header_title">
                         {{ context.title }}
                     </div>
                 </div>
             </el-col>
-            <el-col  :xs="1" :sm="3" :md="39" :xl="9" :lg="3"><div class="grid-content bg-purple"></div></el-col>
+            <el-col  :xs="2" :sm="3" :md="39" :xl="9" :lg="3"><div class="grid-content bg-purple"></div></el-col>
         </el-row>
         <el-row>
-            <el-col :xs="0" :sm="3" :md="3" :xl="3" :lg="3"><div class="grid-content bg-purple"></div></el-col>
-            <el-col :xs="12" :sm="9" :md="9" :xl="9" :lg="9">
+            <el-col :xs="2" :sm="3" :md="3" :xl="3" :lg="3"><div class="grid-content bg-purple"></div></el-col>
+            <el-col :xs="20" :sm="14" :md="18" :xl="18" :lg="18">
                 <div class="grid-content bg-purple-light">
                     <div class="home_example_context">
                         <p
@@ -25,14 +25,14 @@
                     </div>
                 </div>
             </el-col>
-            <el-col :xs="12" :sm="10" :md="9" :xl="9" :lg="9">
+            <!-- <el-col :xs="12" :sm="10" :md="9" :xl="9" :lg="9">
                 <div class="home_example_backgroundImg">
                     <div class="home_exaple_imgBox">
                         <img :src='context.backgroundImg' alt="">
                     </div>
                 </div>
-            </el-col>
-            <el-col :xs="0" :sm="2" :md="3" :xl="3" :lg="3"><div class="grid-content bg-purple"></div></el-col>
+            </el-col> -->
+            <el-col :xs="2" :sm="2" :md="3" :xl="3" :lg="3"><div class="grid-content bg-purple"></div></el-col>
         </el-row>
     </div>
 </template>
@@ -53,7 +53,7 @@ export default {
             text: '我们的使命通过建立分散的合规协议支持加密资产，该协议规范了了加密资产在区块链上的发行和交易。'
           }
         ],
-        backgroundImg: 'https://harbor.com/images/index/buildings.svg'
+        backgroundImg: 'static/img/city-background.svg'
       }
     }
   }

@@ -11,7 +11,7 @@
                        {{ context.title }}
                     </div>
                     <div class="header_button">
-                        <router-link to="about">{{ context.button }}</router-link>
+                        <router-link to="whitePaper">{{ context.button }}</router-link>
                     </div>
                 </div>
             </el-col>
@@ -27,8 +27,8 @@ export default {
     return {
       context: {
         logoUrl: require('../../../assets/img/footerLogo@3x.png'),
-        title: '从Stmenu 获取最新更新',
-        button: '注册已获取更新'
+        title: '查看stmenu白皮书',
+        button: '点击查看'
       }
     }
   }
@@ -37,7 +37,7 @@ export default {
 
 <style lang="scss" scoped>
 .el-row {
-    background: -webkit-gradient(linear,left top,left bottom,from(#3b4255),to(#101a37));
+    background: -webkit-gradient(linear,left top,left bottom,from(#9dc0b9),to(#63808b));
     margin-bottom: 20px;
     &:last-child {
       margin-bottom: 0;

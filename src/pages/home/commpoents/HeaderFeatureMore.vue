@@ -93,6 +93,7 @@ export default {
     border-radius: 4px;
   }
   .grid-content {
+    margin-top: 20px;
     border-radius: 4px;
     min-height: 36px;
   }
@@ -151,6 +152,10 @@ export default {
       color: #ffffff;
       text-align: center;
       border-radius: 50%;
+  }
+  .header_more_feature_item__content {
+      margin-top: 40px;
+      min-height: 36px;
   }
   .header_more_feature .header_more_feature_item__content > .header_more_feature_item__text {
       float: left;
